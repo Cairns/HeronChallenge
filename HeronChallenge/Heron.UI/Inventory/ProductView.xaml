@@ -1,0 +1,221 @@
+﻿<src:WindowBase
+             x:Class="Heron.UI.Inventory.ProductView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:src="clr-namespace:Heron.UI.Common"
+             Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth ="250" Width="250"/>
+            <ColumnDefinition MinWidth ="250" Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "Auto" />
+            <RowDefinition Height = "Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name = "productGrid" 
+         Grid.Column="0"
+         HorizontalAlignment = "Left"
+         Margin = "10,10,0,0" 
+         VerticalAlignment = "Top">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width = "Auto" />
+                <ColumnDefinition Width = "Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "Auto" />
+                <RowDefinition Height = "Auto" />
+                <RowDefinition Height = "Auto" />
+                <RowDefinition Height = "Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Content = "Product Code:" 
+            Grid.Column = "0" 
+            HorizontalAlignment = "Left" 
+            Margin = "3" 
+            Grid.Row = "0" 
+            VerticalAlignment = "Center" />
+
+            <TextBox x:Name = "productCodeTextBox" 
+            Grid.Column = "1" 
+            HorizontalAlignment = "Left" 
+            Height = "23" 
+            Margin = "3" 
+            Grid.Row = "0" 
+            Text = "{Binding Product.ProductCode, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors = True}"
+            VerticalAlignment = "Center" 
+            Width = "120" />
+
+            <Label Content = "Description:" 
+            Grid.Column = "0" 
+            HorizontalAlignment = "Left" 
+            Margin = "3" 
+            Grid.Row = "1" 
+            VerticalAlignment = "Center" />
+
+            <TextBox x:Name = "descriptionTextBox"
+            Grid.Column = "1" 
+            HorizontalAlignment = "Left" 
+            Height = "23" 
+            Margin = "3" 
+            Grid.Row = "1" 
+            Text = "{Binding Product.Description, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors = True}"
+            VerticalAlignment = "Center" 
+            Width = "120" />
+
+            <Label Content = "Retail Price:" 
+            Grid.Column = "0" 
+            HorizontalAlignment = "Left" 
+            Margin = "3" 
+            Grid.Row = "2" 
+            VerticalAlignment = "Center" />
+
+            <TextBox x:Name = "retailPriceTextBox" 
+            Grid.Column = "1" 
+            HorizontalAlignment = "Left" 
+            Height = "23" 
+            Margin = "3" 
+            Grid.Row = "2" 
+            Text = "{Binding Product.RetailPrice, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors = True}"
+            VerticalAlignment = "Center" 
+            Width = "120" />
+
+            <Label Content = "Vat Rate:" 
+            Grid.Column = "0" 
+            HorizontalAlignment = "Left" 
+            Margin = "3" 
+            Grid.Row = "3" 
+            VerticalAlignment = "Center" />
+
+            <TextBox x:Name = "vatRateTextBox" 
+            Grid.Column = "1" 
+            HorizontalAlignment = "Left" 
+            Height = "23" 
+            Margin = "3" 
+            Grid.Row = "3" 
+            Text = "{Binding Product.VatRate,  UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors = True}"
+            VerticalAlignment = "Center" 
+            Width = "120" />
+
+        </Grid>
+
+        <Grid x:Name = "productAdditionalDetailsGrid" 
+              Grid.Column="1"
+              Grid.Row="0"
+              HorizontalAlignment = "Left" 
+              Margin = "10,10,0,0" 
+              VerticalAlignment = "Top">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width = "Auto" />
+                <ColumnDefinition Width = "Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "Auto" />
+                <RowDefinition Height = "Auto" />
+                <RowDefinition Height = "Auto" />
+                <RowDefinition Height = "Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Content = "Vat Amount:" 
+                   Grid.Column = "0" 
+                   HorizontalAlignment = "Left" 
+                   Margin = "3" 
+                   Grid.Row = "0" 
+                   VerticalAlignment = "Center" />
+
+            <TextBox x:Name = "productVatAmountTextBox" 
+                     Grid.Column = "1" 
+                     HorizontalAlignment = "Left" 
+                     Height = "23" 
+                     Margin = "3" 
+                     Grid.Row = "0" 
+                     Text = "{Binding VatAmount, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors = True}"
+                     VerticalAlignment = "Center" 
+                     Width = "140" />
+
+            <Label Content = "Retail Price Ex Vat:" 
+                   Grid.Column = "0" 
+                   HorizontalAlignment = "Left" 
+                   Margin = "3" 
+                   Grid.Row = "1" 
+                   VerticalAlignment = "Center" />
+
+            <TextBox x:Name = "retailPriceExVatTextBox" 
+                     Grid.Column = "1" 
+                     HorizontalAlignment = "Left" 
+                     Height = "23" 
+                     Margin = "3" 
+                     Grid.Row = "1" 
+                     Text = "{Binding RetailPriceExVat, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors = True}"
+                     VerticalAlignment = "Center" 
+                     Width = "140" />
+
+            <Label Content = "Barcodes:" 
+                   Grid.Column = "0" 
+                   HorizontalAlignment = "Left" 
+                   Margin = "3" 
+                   Grid.Row = "2" 
+                   VerticalAlignment = "Center" />
+
+            <ListView x:Name = "productBarcodes" 
+                     Grid.Column = "2" 
+                     HorizontalAlignment = "Left" 
+                     Height = "100" 
+                     Margin = "3" 
+                     Grid.Row = "2" 
+                     ItemsSource = "{Binding Path = Product.Barcodes}"
+                     SelectedItem="{Binding Path = SelectedBarcode}"
+                     VerticalAlignment = "Center" 
+                     Width = "140">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Code" Width="140" DisplayMemberBinding="{Binding Path = Code}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <Grid Grid.Column="1"
+                  Grid.Row = "3">
+                <Button Content = "Add"
+                        Command = "{Binding AddCommand}" 
+                        HorizontalAlignment = "Left" 
+                        Margin = "3,6,0,0" 
+                        VerticalAlignment = "Top" 
+                        Width = "50" />
+
+                <Button Content = "Remove" 
+                        Command = "{Binding RemoveCommand}" 
+                        HorizontalAlignment = "right" 
+                        Margin = "60,6,3,0" 
+                        VerticalAlignment = "Top" 
+                        Width = "50" />
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row = "1"
+              VerticalAlignment="Bottom">
+            <Button Content = "Ok" 
+            Command = "{Binding SaveCommand}" 
+            HorizontalAlignment = "Left" 
+            Margin = "25,6,0,0" 
+            VerticalAlignment = "Top" 
+            Width = "75" />
+
+            <Button Content = "Cancel" 
+            Command = "{Binding CancelCommand}" 
+            HorizontalAlignment = "Left" 
+            Margin = "150,5,0,0" 
+            VerticalAlignment = "Top" 
+            Width = "75" />
+        </Grid>
+    </Grid>
+</src:WindowBase>

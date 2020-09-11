@@ -1,0 +1,74 @@
+﻿<src:UserControlBase
+             x:Class="Heron.UI.Inventory.ProductsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:src="clr-namespace:Heron.UI.Common"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="fileOptionsGrid"
+         HorizontalAlignment = "Left"
+         Margin = "10,10,0,0" 
+         VerticalAlignment = "Top"
+         Grid.Row="0"
+         Grid.Column="0">
+
+            <GroupBox Header="File Options" VerticalAlignment="Top" Height="80">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Load" HorizontalAlignment="Left" Height="35" Margin="5,10,0,0" VerticalAlignment="Top" Width="62" Command="{Binding Path = LoadCommand}"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Height="35" Margin="5,10,0,0" VerticalAlignment="Top" Width="62" Command="{Binding Path = SaveCommand}"/>
+                </StackPanel>
+            </GroupBox>
+
+        </Grid>
+
+        <Grid x:Name="productsGrid"
+         HorizontalAlignment = "Left"
+         Margin = "10,10,0,0" 
+         VerticalAlignment = "Top"
+         Grid.Row="1"
+         Grid.Column="0">
+
+            <GroupBox Header="Products" VerticalAlignment="Top" Height="Auto">
+                <ListView Name="productsListView" ItemsSource="{Binding Path = Products}" SelectedItem="{Binding Path = SelectedProduct}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Product Code" Width="100" DisplayMemberBinding="{Binding Path = ProductCode}" />
+                            <GridViewColumn Header="Description" Width="120" DisplayMemberBinding="{Binding Path = Description}" />
+                            <GridViewColumn Header="Price Inc Vat" Width="80" DisplayMemberBinding="{Binding Path = RetailPrice}" />
+                            <GridViewColumn Header="Vat Rate" Width="80" DisplayMemberBinding="{Binding Path = VatRate}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </GroupBox>
+        </Grid>
+
+        <Grid x:Name="productOptionsGrid"
+         HorizontalAlignment = "Left"
+         Margin = "10,10,0,0" 
+         VerticalAlignment = "Bottom"
+         Grid.Row="2"
+         Grid.Column="0">
+
+            <GroupBox Header="Product Options" VerticalAlignment="Top" Height="80">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Add" HorizontalAlignment="Left" Height="35" Margin="5,10,0,0" VerticalAlignment="Top" Width="62" Command="{Binding Path = AddCommand}"/>
+                    <Button Content="Edit" HorizontalAlignment="Left" Height="35" Margin="5,10,0,0" VerticalAlignment="Top" Width="62" Command="{Binding Path = EditCommand}"/>
+                    <Button Content="Remove" HorizontalAlignment="Left" Height="35" Margin="5,10,0,0" VerticalAlignment="Top" Width="62" Command="{Binding Path = RemoveCommand}"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</src:UserControlBase>

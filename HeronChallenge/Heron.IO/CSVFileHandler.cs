@@ -47,6 +47,11 @@ namespace Heron.IO
             {
                 using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
                 {
+                    foreach (ClassMap map in this.ClassMaps)
+                    {
+                        csv.Configuration.RegisterClassMap(map);
+                    }
+
                     csv.WriteRecords<T>(data);
                 }
             }

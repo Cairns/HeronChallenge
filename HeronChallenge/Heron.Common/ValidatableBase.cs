@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 namespace Heron.Common
@@ -96,20 +97,10 @@ namespace Heron.Common
 
         public virtual void Validate()
         {
-            //var results = new List<ValidationResult>();
-            //ValidationContext context = new ValidationContext(this);
-            //Validator.TryValidateObject(this, context, results);
-
-            //if (results.Any())
-            //{
-            //    Errors[""] = results.Select(v => v.ErrorMessage).ToList();
-            //}
-            //else
-            //{
-            //    Errors.Remove("");
-            //}
-
-            //this.OnPropertyErrorsChanged("");
+            foreach(PropertyInfo property in this.GetType().GetProperties())
+            {
+                ValidateProperty(property.GetValue(this), property.Name);
+            }
         }
 
         public void ValidateProperty<T>(T value, [CallerMemberName] string propertyName = null)
