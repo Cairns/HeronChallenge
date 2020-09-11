@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heron.Client", "Heron.Client\Heron.Client.csproj", "{5BD5CBC2-35A0-4C9E-A3A9-D119E3376FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heron.Common", "Heron.Common\Heron.Common.csproj", "{08730848-8504-462E-9198-C19938BA2BB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heron.IO", "Heron.IO\Heron.IO.csproj", "{C4A29010-9609-45A9-8348-F6F9F6937647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heron.BO", "Heron.BO\Heron.BO.csproj", "{F40F7D16-8E33-421A-931E-BE22585B314E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heron.UI", "Heron.UI\Heron.UI.csproj", "{FCD58C39-7B61-4E5F-AD44-B978332A8077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heron.Tests", "Heron.Tests\Heron.Tests.csproj", "{F6636EA3-CEE2-4477-99A6-5E27E592D6A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BD5CBC2-35A0-4C9E-A3A9-D119E3376FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD5CBC2-35A0-4C9E-A3A9-D119E3376FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD5CBC2-35A0-4C9E-A3A9-D119E3376FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD5CBC2-35A0-4C9E-A3A9-D119E3376FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08730848-8504-462E-9198-C19938BA2BB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08730848-8504-462E-9198-C19938BA2BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08730848-8504-462E-9198-C19938BA2BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08730848-8504-462E-9198-C19938BA2BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A29010-9609-45A9-8348-F6F9F6937647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A29010-9609-45A9-8348-F6F9F6937647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A29010-9609-45A9-8348-F6F9F6937647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A29010-9609-45A9-8348-F6F9F6937647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40F7D16-8E33-421A-931E-BE22585B314E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40F7D16-8E33-421A-931E-BE22585B314E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40F7D16-8E33-421A-931E-BE22585B314E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40F7D16-8E33-421A-931E-BE22585B314E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD58C39-7B61-4E5F-AD44-B978332A8077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD58C39-7B61-4E5F-AD44-B978332A8077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD58C39-7B61-4E5F-AD44-B978332A8077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD58C39-7B61-4E5F-AD44-B978332A8077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6636EA3-CEE2-4477-99A6-5E27E592D6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6636EA3-CEE2-4477-99A6-5E27E592D6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6636EA3-CEE2-4477-99A6-5E27E592D6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6636EA3-CEE2-4477-99A6-5E27E592D6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D1507AB-6E98-4250-B032-699E04591A04}
+	EndGlobalSection
+EndGlobal

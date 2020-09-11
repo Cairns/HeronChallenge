@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Heron.BO\Heron.BO.csproj" />
+    <ProjectReference Include="..\Heron.Common\Heron.Common.csproj" />
+    <ProjectReference Include="..\Heron.IO\Heron.IO.csproj" />
+  </ItemGroup>
+
+</Project>

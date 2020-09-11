@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/HeronChallenge/Heron.BO/bin/Debug/netcoreapp3.1
+/HeronChallenge/Heron.BO/obj
+/HeronChallenge/Heron.Client/bin/Debug/netcoreapp3.1
+/HeronChallenge/Heron.Client/obj
+/HeronChallenge/Heron.Common/obj
+/HeronChallenge/Heron.Common/bin/Debug/netcoreapp3.1
+/HeronChallenge/Heron.IO/bin/Debug/netcoreapp3.1
+/HeronChallenge/Heron.IO/obj
+/HeronChallenge/Heron.Tests/bin/Debug/netcoreapp3.1
+/HeronChallenge/Heron.Tests/obj
+/HeronChallenge/Heron.UI/obj
+/HeronChallenge/Heron.UI/bin/Debug/netcoreapp3.1
